@@ -23,7 +23,8 @@ const Header = () => {
         const {uid ,email,displayName,photoURL} = user;
         dispatch(addUser  ( {uid:uid,email:email,displayName:displayName,photoURL:photoURL} )) ;
         navigate("/Browser");
-      } else {
+      } 
+      else {
         dispatch(removeUser());
         navigate("/");
     
@@ -32,11 +33,14 @@ const Header = () => {
 
     return ()=> unSubcribe();
 }, []);
+
+
   return (
     <div className='flex absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen justify-between'>
       <div className='w-56'>
       <img  src='https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png' alt='Logo' />
       </div>
+
       {user && <div className='flex'>
       <div className='my-auto w-10'>
         <img className="rounded-3xl ml-5"src= "https://avatars.githubusercontent.com/u/129070212?v=4" alt='userIcon'/>
