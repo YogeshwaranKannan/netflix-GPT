@@ -9,7 +9,7 @@ export const useTrailerPlay = ()=>{
        const data = await fetch('https://api.themoviedb.org/3/movie/1096197/videos?language=en-US', API_OPTION);
        const json = await data.json();
        const trailer = json.results.filter((e)=> e.type==="Trailer");
-       console.log(trailer);
+  
        dispatch(addTrailerMovies(trailer[0]));
     };
     useEffect(()=>{
