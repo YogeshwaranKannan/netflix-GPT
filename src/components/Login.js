@@ -6,6 +6,7 @@ import { auth } from '../utils/firebase';
  
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BACK_CDN } from '../utils/constants';
 
 const Login = () => {
   
@@ -66,7 +67,7 @@ const Login = () => {
       <Header/>
     </div>
     <div className='absolute'>
-      <img src='https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='Backgroung' />
+      <img src={BACK_CDN} alt='Backgroung' />
     </div>
       <form onSubmit={(e)=>e.preventDefault() } className='text-white absolute p-12 bg-black w-3/12 my-36 m-auto left-0 right-0 bg-opacity-80'>
         <h1 className='font-bold text-3xl py-4 my-2'>{isSignIn ? "Sign In" : "Sign Up"}</h1>

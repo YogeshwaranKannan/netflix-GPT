@@ -46,7 +46,7 @@ const Header = () => {
 
   return (
     <div className='flex absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-screen justify-between'>
-      <div className='w-36 py-6 bg-gradient-to-r from-black'>
+      <div className='w-36 py-6 '>
       <img  src={Logo}alt='Logo' />
       </div>
 
